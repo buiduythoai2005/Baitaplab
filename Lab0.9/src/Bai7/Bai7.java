@@ -11,8 +11,8 @@ package Bai7;
 public class Bai7 {
     public static void main(String[] args) {
         NhanVien[] ds = {
-            new NhanVienFullTime("FT1", "Nguyen Luong", 1000, 500),
-            new NhanVienPartTime("PT1", "Tran Luong", 20, 15)
+            new NhanVienFullTime("FT1", "duy thieu", 1000, 500),
+            new NhanVienPartTime("PT1", "Duy THoai", 20, 15)
         };
 
         for (NhanVien nv : ds) {
