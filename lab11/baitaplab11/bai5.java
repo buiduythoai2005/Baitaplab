@@ -1,0 +1,199 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package baitaplab11;
+import javax.swing.*;
+import java.awt.*;
+/**
+ *
+ * @author admin
+ */
+public class bai5 extends javax.swing.JFrame {
+    
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(bai5.class.getName());
+
+    /**
+     * Creates new form bai5
+     */
+   // ===== Khai báo component =====
+    private JTextField txtHoTen;
+    private JPasswordField txtMatKhau;
+
+    private JRadioButton rdNam, rdNu, rdKhac;
+    private ButtonGroup groupGioiTinh;
+
+    private JCheckBox cbDocSach, cbNgheNhac, cbXemPhim;
+
+    private JButton btnDangKy;
+    private JTextArea txtThongTin;
+
+    public bai5() {
+        initComponents();      // KHÔNG SỬA
+        initFormByCode();      // FORM BẰNG CODE
+    }
+     // ===== FORM TẠO BẰNG CODE =====
+    private void initFormByCode() {
+        setTitle("Bài 5 - Đăng ký thông tin cá nhân");
+        setSize(600, 400);
+        setLocationRelativeTo(null);
+        setLayout(new BorderLayout(10, 10));
+
+        // ===== PANEL NHẬP THÔNG TIN =====
+        JPanel pnlNhap = new JPanel(new GridLayout(0, 2, 10, 10));
+
+        txtHoTen = new JTextField();
+        txtMatKhau = new JPasswordField();
+
+        pnlNhap.add(new JLabel("Họ tên:"));
+        pnlNhap.add(txtHoTen);
+        pnlNhap.add(new JLabel("Mật khẩu:"));
+        pnlNhap.add(txtMatKhau);
+
+        // ===== GIỚI TÍNH =====
+        rdNam = new JRadioButton("Nam");
+        rdNu = new JRadioButton("Nữ");
+        rdKhac = new JRadioButton("Khác");
+
+        groupGioiTinh = new ButtonGroup();
+        groupGioiTinh.add(rdNam);
+        groupGioiTinh.add(rdNu);
+        groupGioiTinh.add(rdKhac);
+
+        JPanel pnlGioiTinh = new JPanel(new GridLayout(1, 3));
+        pnlGioiTinh.setBorder(BorderFactory.createTitledBorder("Giới tính"));
+        pnlGioiTinh.add(rdNam);
+        pnlGioiTinh.add(rdNu);
+        pnlGioiTinh.add(rdKhac);
+
+        // ===== SỞ THÍCH =====
+        cbDocSach = new JCheckBox("Đọc sách");
+        cbNgheNhac = new JCheckBox("Nghe nhạc");
+        cbXemPhim = new JCheckBox("Xem phim");
+
+        JPanel pnlSoThich = new JPanel(new GridLayout(1, 3));
+        pnlSoThich.setBorder(BorderFactory.createTitledBorder("Sở thích"));
+        pnlSoThich.add(cbDocSach);
+        pnlSoThich.add(cbNgheNhac);
+        pnlSoThich.add(cbXemPhim);
+
+        // ===== BUTTON =====
+        btnDangKy = new JButton("Đăng ký");
+
+        btnDangKy.addActionListener(e -> xuLyDangKy());
+
+        // ===== TEXTAREA HIỂN THỊ =====
+        txtThongTin = new JTextArea();
+        txtThongTin.setEditable(false);
+        JScrollPane scroll = new JScrollPane(txtThongTin);
+
+        // ===== GHÉP FORM =====
+        JPanel pnlTop = new JPanel(new BorderLayout(10, 10));
+        pnlTop.add(pnlNhap, BorderLayout.NORTH);
+        pnlTop.add(pnlGioiTinh, BorderLayout.CENTER);
+        pnlTop.add(pnlSoThich, BorderLayout.SOUTH);
+
+        add(pnlTop, BorderLayout.NORTH);
+        add(btnDangKy, BorderLayout.CENTER);
+        add(scroll, BorderLayout.SOUTH);
+    }
+
+    // ===== XỬ LÝ ĐĂNG KÝ =====
+    private void xuLyDangKy() {
+        String hoTen = txtHoTen.getText().trim();
+        char[] matKhau = txtMatKhau.getPassword();
+
+        // Kiểm tra dữ liệu
+        if (hoTen.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Họ tên không được để trống!");
+            return;
+        }
+
+        if (matKhau.length < 6) {
+            JOptionPane.showMessageDialog(this, "Mật khẩu phải từ 6 ký tự trở lên!");
+            return;
+        }
+
+        String gioiTinh = "";
+        if (rdNam.isSelected()) gioiTinh = "Nam";
+        else if (rdNu.isSelected()) gioiTinh = "Nữ";
+        else if (rdKhac.isSelected()) gioiTinh = "Khác";
+        else {
+            JOptionPane.showMessageDialog(this, "Vui lòng chọn giới tính!");
+            return;
+        }
+
+        StringBuilder soThich = new StringBuilder();
+        if (cbDocSach.isSelected()) soThich.append("Đọc sách, ");
+        if (cbNgheNhac.isSelected()) soThich.append("Nghe nhạc, ");
+        if (cbXemPhim.isSelected()) soThich.append("Xem phim, ");
+
+        if (soThich.length() == 0) {
+            JOptionPane.showMessageDialog(this, "Vui lòng chọn ít nhất 1 sở thích!");
+            return;
+        }
+
+        // Hiển thị kết quả
+        txtThongTin.setText(
+                "HỌ TÊN: " + hoTen + "\n" +
+                "GIỚI TÍNH: " + gioiTinh + "\n" +
+                "SỞ THÍCH: " + soThich.substring(0, soThich.length() - 2)
+        );
+
+        // Xóa mật khẩu sau khi dùng
+        txtMatKhau.setText("");
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
+            logger.log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(() -> new bai5().setVisible(true));
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // End of variables declaration//GEN-END:variables
+}
