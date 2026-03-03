@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="BÀI TẬP TRẮC NGHIỆM"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Câu 1 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Câu 1: Thủ đô của Việt Nam là?"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <RadioGroup
+            android:id="@+id/rgQuestion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <RadioButton android:id="@+id/rb1a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hồ Chí Minh" />
+            <RadioButton android:id="@+id/rb1b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hà Nội" />
+            <RadioButton android:id="@+id/rb1c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đà Nẵng" />
+            <RadioButton android:id="@+id/rb1d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Huế" />
+        </RadioGroup>
+
+        <!-- Câu 2 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Câu 2: 2 + 2 bằng mấy?"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <RadioGroup
+            android:id="@+id/rgQuestion2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <RadioButton android:id="@+id/rb2a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3" />
+            <RadioButton android:id="@+id/rb2b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4" />
+            <RadioButton android:id="@+id/rb2c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5" />
+            <RadioButton android:id="@+id/rb2d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="6" />
+        </RadioGroup>
+
+        <!-- Câu 3 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Câu 3: Đơn vị tiền tệ Việt Nam là?"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <RadioGroup
+            android:id="@+id/rgQuestion3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <RadioButton android:id="@+id/rb3a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="USD" />
+            <RadioButton android:id="@+id/rb3b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yên" />
+            <RadioButton android:id="@+id/rb3c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VNĐ" />
+            <RadioButton android:id="@+id/rb3d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Euro" />
+        </RadioGroup>
+
+        <!-- Câu 4 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Câu 4: Android thuộc về công ty nào?"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <RadioGroup
+            android:id="@+id/rgQuestion4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <RadioButton android:id="@+id/rb4a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apple" />
+            <RadioButton android:id="@+id/rb4b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Google" />
+            <RadioButton android:id="@+id/rb4c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Microsoft" />
+            <RadioButton android:id="@+id/rb4d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Samsung" />
+        </RadioGroup>
+
+        <!-- Câu 5 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Câu 5: Số nào là số nguyên tố?"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <RadioGroup
+            android:id="@+id/rgQuestion5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+            <RadioButton android:id="@+id/rb5a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4" />
+            <RadioButton android:id="@+id/rb5b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="6" />
+            <RadioButton android:id="@+id/rb5c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7" />
+            <RadioButton android:id="@+id/rb5d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="9" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nộp bài"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView>

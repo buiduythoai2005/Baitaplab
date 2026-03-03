@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Đăng ký môn học</string>
+    <string name="title_app">ĐĂNG KÝ MÔN HỌC</string>
+    <string name="hint_hoten">Họ tên SV</string>
+    <string name="hint_mssv">MSSV</string>
+    <string name="label_chonmon">Chọn môn học (500.000đ/môn):</string>
+    <string name="mon_android">Lập trình Android</string>
+    <string name="mon_java">Lập trình Java</string>
+    <string name="mon_python">Lập trình Python</string>
+    <string name="mon_web">Thiết kế Web</string>
+    <string name="mon_database">Cơ sở dữ liệu</string>
+    <string name="mon_networking">Mạng máy tính</string>
+    <string name="btn_tinh">Tính học phí</string>
+    <string name="btn_reset">Reset form</string>
+    <string name="receipt_placeholder">Chi tiết hóa đơn sẽ hiển thị ở đây</string>
+    <string name="msg_input_empty">Vui lòng nhập đầy đủ thông tin SV</string>
+    <string name="msg_no_subject">Vui lòng chọn ít nhất 1 môn học</string>
+    <string name="receipt_title">HÓA ĐƠN ĐĂNG KÝ</string>
+    <string name="receipt_student">Sinh viên: </string>
+    <string name="receipt_mssv">MSSV: </string>
+    <string name="receipt_selected_subjects">Môn học đã chọn:</string>
+    <string name="receipt_count">Số môn: </string>
+    <string name="receipt_total">Tổng tiền: </string>
+    <string name="receipt_discount">Giảm giá (5%): -</string>
+    <string name="receipt_final">Thành tiền: </string>
+</resources>

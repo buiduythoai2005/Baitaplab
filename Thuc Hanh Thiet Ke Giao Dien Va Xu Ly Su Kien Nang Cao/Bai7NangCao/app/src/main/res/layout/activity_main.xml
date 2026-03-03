@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="QUẢN LÝ ĐẶT PHÒNG"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/edtHoTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Họ tên" />
+
+    <EditText
+        android:id="@+id/edtCMND"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CMND"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại phòng:"
+        android:layout_marginTop="10dp" />
+
+    <RadioGroup
+        android:id="@+id/rgLoaiPhong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rbVip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIP (1000)"
+            android:checked="true" />
+        <RadioButton
+            android:id="@+id/rbDouble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Double (500)" />
+        <RadioButton
+            android:id="@+id/rbSingle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Single (300)" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edtSoNgay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số ngày ở"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dịch vụ thêm:"
+        android:layout_marginTop="10dp" />
+
+    <CheckBox
+        android:id="@+id/cbAnSang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ăn sáng (100)" />
+
+    <CheckBox
+        android:id="@+id/cbGiatUi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giặt ủi (50)" />
+
+    <Button
+        android:id="@+id/btnDatPhong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ĐẶT PHÒNG"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>
