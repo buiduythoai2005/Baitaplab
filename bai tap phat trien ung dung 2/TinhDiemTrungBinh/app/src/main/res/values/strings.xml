@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TinhDiem</string>
+
+    <string name="hint_toan">Nhập điểm Toán</string>
+    <string name="hint_van">Nhập điểm Văn</string>
+    <string name="hint_anh">Nhập điểm Anh</string>
+
+    <string name="btn_tinh">Tính điểm trung bình</string>
+    <string name="btn_xoa">Xóa dữ liệu</string>
+    <string name="btn_hienthi">Hiển thị kết quả</string>
+
+    <string name="result_default">Kết quả sẽ hiển thị ở đây</string>
+    <string name="invalid_score">Điểm không hợp lệ (0–10)</string>
+    <string name="average_result">Điểm trung bình: %1$.2f</string>
+    <string name="not_calculated">Vui lòng tính điểm trước</string>
+</resources>

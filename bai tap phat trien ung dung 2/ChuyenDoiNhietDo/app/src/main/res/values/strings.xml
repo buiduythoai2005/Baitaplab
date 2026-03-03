@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ChuyenDoiNhietDo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_c">Nhập độ C</string>
+    <string name="hint_f">Nhập độ F</string>
+    <string name="btn_tinh">Tính toán</string>
+    <string name="btn_xoa">Xóa</string>
+    <string name="empty_input">Vui lòng nhập dữ liệu</string>
+    <string name="result_f">Kết quả: %1$.2f °F</string>
+    <string name="result_c">Kết quả: %1$.2f °C</string>
+</resources>
